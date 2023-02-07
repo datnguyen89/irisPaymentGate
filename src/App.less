@@ -1,0 +1,146 @@
+@import '~antd/dist/antd.less';
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+// region antd style override
+
+// Button
+//.ant-btn-primary {
+//  background: linear-gradient(90deg, #55B1DB 0%, #216CC4 100%);
+//  border: none;
+//
+//  &:hover, &:focus {
+//    background: linear-gradient(90deg, #55B1DB 0%, #216CC4 100%);
+//  }
+//}
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+  position: absolute;
+  right: -16px;
+}
+
+// endregion
+
+// region custom style
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.ant-input-affix-wrapper {
+  .ant-input {
+    height: auto !important;
+  }
+}
+
+.ant-form-item-control-input-content {
+  .ant-input {
+    height: 42px;
+  }
+}
+
+
+// Modal
+.payment-guide-modal {
+  .ant-modal {
+    width: 90% !important;
+    @media screen and (max-width: 768px) {
+      width: 100% !important;
+    }
+  }
+}
+
+.custom-modal {
+  .ant-modal-body {
+    padding: 16px;
+  }
+
+  .ant-modal-footer {
+    border: none;
+    text-align: center;
+
+    .ant-btn {
+      min-width: 120px;
+    }
+
+    //.ant-btn-primary {
+    //  background: linear-gradient(90deg, #55B1DB 0%, #216CC4 100%);
+    //  border: none;
+    //}
+  }
+
+  .ant-modal-header {
+    border: none;
+    background: linear-gradient(90deg, #55B1DB 0%, #216CC4 100%);
+    border-radius: @border-radius-base @border-radius-base 0 0;
+
+    .ant-modal-title {
+      padding: 0 16px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  .ant-modal-content {
+    border-radius: @border-radius-base;
+  }
+
+  .ant-modal-close-x {
+    color: #fff;
+  }
+}
+
+.custom-modal-confirm {
+  .ant-modal-body {
+    padding: 0;
+
+    .ant-modal-confirm-title {
+      padding: 16px;
+      text-align: center;
+      background: linear-gradient(90deg, #55B1DB 0%, #216CC4 100%);
+      color: #fff;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+    }
+  }
+
+  .ant-modal-close-x {
+    color: #fff;
+  }
+
+  .ant-btn {
+    min-width: 120px;
+  }
+
+  .ant-modal-confirm-content {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .ant-modal-confirm-btns {
+    margin: 0;
+    text-align: center;
+    padding: 0 16px 16px 16px;
+  }
+
+  &.hide-btn {
+    .ant-modal-confirm-btns {
+      display: none;
+    }
+  }
+}
+
+.ant-alert-message {
+  padding: 0 8px;
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+// endregion
+
+
+
